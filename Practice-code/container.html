@@ -15,16 +15,80 @@
 </head>
 <style>
     .mydiv{
-        width: 100%;
-        height: 100%;
+        margin-top:20px;
+        height: 100px;
+        font-size: 18px;
+        font-weight: bold;
+        color:white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 </style>
 <body>
-  
+    
            
     </ul>
-    <div class="Containerc bg-secondary">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi tenetur repellendus ratione? Rem pariatur hic voluptas quo laboriosam aut magni odit a. Impedit incidunt minima excepturi temporibus inventore laborum accusantium.
+    <div class="mydiv container border border-2 border-dark " id="box">
+     
     </div>
+
+    <div class="container-sm bg-primary my-3 p-4 fw-bold text-white">
+        container-sm (small)
+    </div>
+
+    <div class="container-md bg-secondary my-3 p-4 fw-bold text-white">
+        container-md (medium)
+    </div>
+
+    <div class="container-lg bg-success my-3 p-4 fw-bold text-white">
+        container-lg (large)
+    </div>
+    
+    <div class="container-xl bg-warning my-3 p-4 fw-normal text-danger">
+        container-xl (Extra Large)
+    </div>
+
+    <div class="container-xxl bg-info my-3 p-4 fw-bold text-white">
+        container-xxl (Extra Extra Large)
+    </div>
+
+    <div class="container-fluid bg-danger my-3 p-4 fw-bold text-white">
+        container-fluid (full screen )
+    </div>
+    <!-- script -->
+     <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+></script>
+<script>
+    const box = document.getElementById("box");
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth < 576) {
+        box.style.backgroundColor = "gray";
+        box.textContent = "Extra small size";
+    } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+        box.style.backgroundColor = "pink";
+        box.textContent = "Small / Medium size";
+    } else if (window.innerWidth >= 768 && window.innerWidth < 992) {
+        box.style.backgroundColor = "maroon";
+        box.textContent = "Large size";
+    } else if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+        box.style.backgroundColor = "green";
+        box.textContent = "Extra large size";
+    } else if (window.innerWidth >= 1200 && window.innerWidth < 1400) {
+        box.style.backgroundColor = "red";
+        box.textContent = "Extra extra large size";
+    } else {
+        box.style.backgroundColor = "blue";
+        box.textContent = "Huge size";
+    }
+});
+
+
+</script>
+
 </body>
 </html>
